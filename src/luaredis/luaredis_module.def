@@ -1,0 +1,3 @@
+EXPORTS 
+    luaopen_luaredis
+    require_luaredis
