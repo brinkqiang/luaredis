@@ -83,7 +83,7 @@ ${CMAKE_CURRENT_SOURCE_DIR}/test/*.h)
 
 IF (WIN32)
     ADD_LIBRARY(lua53 SHARED ${DMLUA_SOURCES})
-    ADD_LIBRARY(hiredis ${HIREDIS_SOURCES})
+    ADD_LIBRARY(hiredis SHARED ${HIREDIS_SOURCES})
  
     ADD_LIBRARY(luaredis SHARED ${LUAREDIS_SOURCES} ${CMAKE_CURRENT_SOURCE_DIR}/src/luaredis/luaredis_module.def)
     TARGET_LINK_LIBRARIES(luaredis lua53 hiredis)
