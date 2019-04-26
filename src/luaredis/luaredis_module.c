@@ -28,8 +28,8 @@
   #define SPAM(a) (void)0
 #endif
 
-#define LUAHIREDIS_VERSION     "lua-hiredis 0.2.1"
-#define LUAHIREDIS_COPYRIGHT   "Copyright (C) 2011â€”2013, lua-hiredis authors"
+#define LUAHIREDIS_VERSION     "hiredis version 0.14"
+#define LUAHIREDIS_COPYRIGHT   "Copyright (C) 2013¡ª2018, lua-redis authors"
 #define LUAHIREDIS_DESCRIPTION "Bindings for hiredis Redis-client library"
 
 #define LUAHIREDIS_CONN_MT   "lua-hiredis.connection"
