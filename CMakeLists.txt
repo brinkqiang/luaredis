@@ -60,6 +60,14 @@ ${CMAKE_CURRENT_SOURCE_DIR}/src/luaredis/*.hpp
 ${CMAKE_CURRENT_SOURCE_DIR}/src/luaredis/*.h
 )
 
+FILE(GLOB HIREDIS_SOURCES
+${CMAKE_CURRENT_SOURCE_DIR}/src/hiredis/*.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/src/hiredis/*.cc
+${CMAKE_CURRENT_SOURCE_DIR}/src/hiredis/*.c
+${CMAKE_CURRENT_SOURCE_DIR}/src/hiredis/*.hpp
+${CMAKE_CURRENT_SOURCE_DIR}/src/hiredis/*.h
+)
+
 IF (WIN32)
     LIST(APPEND LUAREDIS_SOURCES)
 ENDIF(WIN32)
@@ -73,9 +81,10 @@ ${CMAKE_CURRENT_SOURCE_DIR}/test/*.h)
 
 IF (WIN32)
     ADD_LIBRARY(lua53 SHARED ${DMLUA_SOURCES})
-
+    ADD_LIBRARY(hiredis ${HIREDIS_SOURCES})
+ 
     ADD_LIBRARY(luaredis SHARED ${LUAREDIS_SOURCES} ${CMAKE_CURRENT_SOURCE_DIR}/src/luaredis/luaredis_module.def)
-    TARGET_LINK_LIBRARIES(luaredis lua53)
+    TARGET_LINK_LIBRARIES(luaredis lua53 hiredis)
 
     ADD_EXECUTABLE(lua ${LUA_SOURCES})
     TARGET_LINK_LIBRARIES(lua lua53)
