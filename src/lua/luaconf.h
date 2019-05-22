@@ -211,10 +211,11 @@
         "./?.lua;" "./?/init.lua;" \
         "!/../?.lua"
 
-#define LUA_CPATH_DEFAULT \
-        LUA_CDIR"?.so;" LUA_CDIR"loadall.so;" "./?.so"
-#endif          /* } */
-
+#define LUA_CPATH_DEFAULT                                       \
+    LUA_CDIR "?.so;" LUA_CDIR "lib?.so;" LUA_CDIR "loadall.so;" \
+             "./?.so;"                                          \
+             "./lib?.so"
+#endif /* } */
 
 /*
 @@ LUA_DIRSEP is the directory separator (for submodules).
