@@ -22,14 +22,8 @@
 #include "luaredis_module.h"
 #include "hiredis/hiredis.h"
 
-#if 0
-  #define SPAM(a) printf a
-#else
-  #define SPAM(a) (void)0
-#endif
-
 #define LUAHIREDIS_VERSION     "hiredis version 0.14"
-#define LUAHIREDIS_COPYRIGHT   "Copyright (C) 2013¡ª2018, lua-redis authors"
+#define LUAHIREDIS_COPYRIGHT   "Copyright (C) 2013-2018, lua-redis authors"
 #define LUAHIREDIS_DESCRIPTION "Bindings for hiredis Redis-client library"
 
 #define LUAHIREDIS_CONN_MT   "lua-hiredis.connection"
