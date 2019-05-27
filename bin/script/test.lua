@@ -1,6 +1,7 @@
+require "string"
 
 function bin2hex(s)
-    s=string.gsub(s,"(.)",function (x) return string.format("%02X ",string.byte(x)) end)
+    s = string.gsub(s,"(.)",function (x) return string.format("%02X ",string.byte(x)) end)
     return s
 end
 
