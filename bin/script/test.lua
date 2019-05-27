@@ -22,6 +22,7 @@ end
 
 local info = redis.unwrap_reply(conn:command("INFO"))
 print(info)
-conn:command("SET", "MYKEY", "hello world!")
+local ret = conn:command("SET", "MYKEY", "hello world!")
+print(ret)
 local value = conn:command("GET", "MYKEY")
 print(value)
