@@ -1,4 +1,3 @@
-module (..., package.seeall)
 
 function bin2hex(s)
     s=string.gsub(s,"(.)",function (x) return string.format("%02X ",string.byte(x)) end)
