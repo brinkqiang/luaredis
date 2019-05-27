@@ -26,8 +26,19 @@ install cmake
 
 ## Intro
 luaredis
-```cpp
+
+win
+```lua
+cd bin/debug
+lua ../script/test.lua
 ```
+
+linux
+```lua
+cd bin
+lua script/test.lua
+```
+
 ## Contacts
 [![Join the chat](https://badges.gitter.im/brinkqiang/luaredis/Lobby.svg)](https://gitter.im/brinkqiang/luaredis)
 

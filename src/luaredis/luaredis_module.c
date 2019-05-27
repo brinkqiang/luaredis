@@ -50,7 +50,7 @@ static void reg_enum(lua_State * L, const luahiredis_Enum * e)
   }
 }
 
-/* This is luaL_setfuncs() from Lua 5.2 alpha */
+/* This is luaL_setfuncs() from Lua 5.3 */
 static void setfuncs (lua_State *L, const luaL_Reg *l, int nup) {
   luaL_checkstack(L, nup, "too many upvalues");
   for (; l && l->name; l++) {  /* fill the table with given functions */
@@ -62,7 +62,7 @@ static void setfuncs (lua_State *L, const luaL_Reg *l, int nup) {
   }
   lua_pop(L, nup);  /* remove upvalues */
 }
-/* End of luaL_setfuncs() from Lua 5.2 alpha */
+/* End of luaL_setfuncs() from Lua 5.3 */
 
 static int lconst_tostring(lua_State * L)
 {
