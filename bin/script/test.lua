@@ -14,7 +14,7 @@ local ok = redis.unwrap_reply(conn:command("AUTH", "123456"))
 if ok == nil then
     print("AUTH reply: nil type: nil")
 elseif ok == "OK" then
-    print("AUTH reply: " .. ok .. " type:" .. type(ok))
+    print("AUTH reply: " .. ok .. " type: " .. type(ok))
 else
     print("AUTH reply: " .. ok .. " type: " .. type(ok))
     return
