@@ -7,7 +7,7 @@ local conn = redis.connect(HOST, PORT)
 local ok = conn:command("AUTH", "123456")
 print("AUTH reply: ")
 print(ok)
-if ok ~= "OK" then
+if ok ~= "OK\r\n" then
     print("AUTH NG.")
     return
 end
