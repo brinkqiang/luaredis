@@ -1,7 +1,7 @@
 
 function bin2hex(s)
     s=string.gsub(s,"(.)",function (x) return string.format("%02X ",string.byte(x)) end)
-    return string.gsub(s,"(.)",function (x) return string.format("%02X ",string.byte(x)) end)
+    return s
 end
 
 local redis = require "luaredis"
