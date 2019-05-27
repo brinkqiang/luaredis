@@ -11,6 +11,8 @@ local PORT = 6379
 
 local conn = redis.connect(HOST, PORT)
 local ok = conn:command("AUTH", "123456")
+print(type(ok))
+
 print("AUTH reply: ")
 print(bin2hex(ok))
 print(ok)
