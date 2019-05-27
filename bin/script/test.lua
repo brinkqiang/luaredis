@@ -12,7 +12,7 @@ local conn = redis.connect(HOST, PORT)
 local ok = redis.unwrap_reply(conn:command("AUTH", "123456"))
 
 if ok ~= "OK" then
-    print("AUTH reply: " .. ok .. " type:" .. type(ok))
+    print("AUTH reply: " .. ok .. " type: " .. type(ok))
     return
 end
 print("AUTH reply: " .. ok .. " type:" .. type(ok))
