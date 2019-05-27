@@ -10,7 +10,7 @@ local PORT = 6379
 
 local conn = redis.connect(HOST, PORT)
 local ok = redis.unwrap_reply(conn:command("AUTH", "123456"))
-print("AUTH reply: " .. ok .. " type:" .. (type(ok))
+print("AUTH reply: " .. ok .. " type:" .. type(ok))
 if ok ~= "OK" then
     print("AUTH NG.")
     return
