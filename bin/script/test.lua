@@ -5,7 +5,8 @@ local PORT = 6379
 
 local conn = redis.connect(HOST, PORT)
 local ok = conn:command("AUTH", "123456")
-print("AUTH reply: " .. ok)
+print("AUTH reply: ")
+print(ok)
 if ok ~= "OK" then
     print("AUTH NG.")
     return
