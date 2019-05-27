@@ -1,4 +1,3 @@
-require "string"
 
 function bin2hex(s)
     s = string.gsub(s,"(.)",function (x) return string.format("%02X ",string.byte(x)) end)
@@ -12,11 +11,10 @@ local PORT = 6379
 local conn = redis.connect(HOST, PORT)
 local ok = redis.unwrap_reply(conn:command("AUTH", "123456"))
 print(type(ok))
-
 print("AUTH reply: ")
 print(bin2hex(ok))
 print(ok)
-if ok == "OK" then
+if ok ~= "OK" then
     print("AUTH NG.")
     return
 end
