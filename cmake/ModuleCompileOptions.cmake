@@ -1,10 +1,12 @@
 
 macro(ModuleSetCompileOptions)
-  cmake_policy(SET CMP0022 NEW)
+  CMAKE_POLICY(SET CMP0022 NEW)
 
-  if(POLICY CMP0048)
-    cmake_policy(SET CMP0048 NEW)
-  endif()
+  IF(POLICY CMP0048)
+    CMAKE_POLICY(SET CMP0048 NEW)
+  ENDIF()
+
+  SET (CMAKE_C_STANDARD 99)
 
   IF (WIN32)
     MESSAGE(STATUS "Now is windows")
