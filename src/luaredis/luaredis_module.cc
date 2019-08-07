@@ -665,3 +665,4 @@ LUAMOD_API int require_luaredis(lua_State* L)
     printf("lua module: require luaredis\n");
     return 1;
 }
+
