@@ -28,14 +28,10 @@ matrix:
           compiler: gcc
           env: 
             - BUILD_TYPE=relwithdebinfo
-            - brew install gcc@7
-            - GCC_VERSION=7
-            - CC=gcc
-            - CXX=g++
           addons:
             apt:
               sources: 
-              packages: ['cmake', 'autoconf', 'automake']
+              packages: ['cmake', 'autoconf', 'automake', 'gcc-7', 'g++-7', 'clang-5.0']
 
 
 install:

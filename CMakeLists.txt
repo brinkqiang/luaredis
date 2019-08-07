@@ -108,6 +108,7 @@ ELSEIF (APPLE)
     ENDIF(USE_LUAREDIS_INNER)
 
     ADD_LIBRARY(luaredis SHARED ${LUAREDIS_SOURCES})
+    SET_TARGET_PROPERTIES(luaredis PROPERTIES LINK_FLAGS "-Wl,-undefined -Wl,dynamic_lookup")
     IF (USE_LUAREDIS_TEST)
         ADD_EXECUTABLE(luaredistest ${LUAREDISTEST_SOURCES})
         TARGET_LINK_LIBRARIES(luaredistest luaredis)
