@@ -80,8 +80,8 @@ script:
   - popd
 
 after_success:
-  - "if [ -f bin/luaredistest ] ; then bin/luaredistest ; fi"
-
+  - echo success
+  
 after_failure:
   - echo failure
 
