@@ -29,14 +29,14 @@ luaredis
 
 win
 ```lua
-cd bin/debug
+cd bin/relwithdebinfo
 lua ../script/test.lua
 ```
 
 linux
 ```lua
-cd bin
-lua script/test.lua
+cd bin/relwithdebinfo
+lua ../script/test.lua
 ```
 
 ```lua
