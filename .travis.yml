@@ -28,9 +28,6 @@ matrix:
           compiler: gcc
           env: 
             - BUILD_TYPE=relwithdebinfo
-            - GCC_VERSION=7
-            - CC=gcc-7
-            - CXX=g++-7
           addons:
             apt:
               sources: 
@@ -81,7 +78,7 @@ script:
 
 after_success:
   - echo success
-  
+
 after_failure:
   - echo failure
 
